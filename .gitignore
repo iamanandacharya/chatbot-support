@@ -34,6 +34,7 @@ log.txt
 /backend/node_modules
 npm-debug.log
 yarn-error.log
+chatbot-app/node_modules
 Frontend-Ionic/.vscode
 Frontend-Ionic/.eslintrc.json
 Frontend-Ionic/.editorconfig

@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>chat-page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ <ion-content>
+  <ion-list>
+    <ion-item *ngFor="let m of messages">
+      <ion-label [color]="m.from === 'user' ? 'primary' : 'secondary'">
+        <b>{{ m.from }}:</b> {{ m.text }}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-input [(ngModel)]="input" placeholder="Type a message..."></ion-input>
+    <ion-button (click)="send()">Send</ion-button>
+  </ion-toolbar>
+</ion-footer>
+
+</ion-content>
