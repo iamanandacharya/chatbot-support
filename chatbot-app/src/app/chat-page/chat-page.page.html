@@ -4,22 +4,23 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
- <ion-content>
+<ion-content>
   <ion-list>
-    <ion-item *ngFor="let m of messages">
-      <ion-label [color]="m.from === 'user' ? 'primary' : 'secondary'">
-        <b>{{ m.from }}:</b> {{ m.text }}
+    <ion-item *ngFor="let msg of messages">
+      <ion-label>
+        <strong>{{ msg.from }}</strong>: {{ msg.text }}<br />
+        <small>{{ msg.timestamp | date:'shortTime' }}</small>
       </ion-label>
+    </ion-item>
+    <ion-item *ngIf="isTyping">
+      <ion-label><em>Bot is typing...</em></ion-label>
     </ion-item>
   </ion-list>
 </ion-content>
 
 <ion-footer>
   <ion-toolbar>
-    <ion-input [(ngModel)]="input" placeholder="Type a message..."></ion-input>
+    <ion-input [(ngModel)]="message" placeholder="Type message..."></ion-input>
     <ion-button (click)="send()">Send</ion-button>
   </ion-toolbar>
 </ion-footer>
-
-</ion-content>
