@@ -2,7 +2,7 @@
 
 ## 📁 Project Structure
 
-- `frontend/`: Ionic Angular app
+- `chatbot-app/`: Ionic Angular app
 - `backend/`: Node.js API using Socket.io + OpenAI
 
 ## 🛠 Setup
@@ -12,4 +12,10 @@
 cd backend
 npm install
 cp .env.example .env # Add your OpenAI API key
+npm start
+
+### 2. chatbot-app frontend
+```bash
+cd chatbot-app
+npm install
 npm start
